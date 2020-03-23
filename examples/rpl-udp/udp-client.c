@@ -32,10 +32,10 @@ udp_rx_callback(struct simple_udp_connection *c,
 {
 	uip_ip6addr_t *rcvd_ip;
 	char buff[40];
-//	data++;	
+	data++;	
   LOG_INFO("Received response ");
 
-/*
+
 	for(int i=0; i < 8; i++) {
 		if ( i == 7 ) {
 				buff[35] = '0';
@@ -51,16 +51,16 @@ udp_rx_callback(struct simple_udp_connection *c,
 				buff[5*i+4] = ':';
 		}
 	}
-*/
+
 
 	for (int i = 0; i < 16; i++) printf("%c", (((*data++ >> 8 ) & 0xff ) ));
 	
 
-//	if(!uiplib_ip6addrconv((char *) buff, rcvd_ip)) return;
+	if(!uiplib_ip6addrconv((char *) buff, rcvd_ip)) return;
 	// Logging received IP address
 	LOG_INFO_6ADDR(rcvd_ip);
-//	printf("%s", buff);
-//	printf(" from ");
+	printf("%s", buff);
+	printf(" from ");
   LOG_INFO_6ADDR(sender_addr);
 #if LLSEC802154_CONF_ENABLED
   LOG_INFO_(" LLSEC LV:%d", uipbuf_get_attr(UIPBUF_ATTR_LLSEC_LEVEL));
