@@ -51,7 +51,7 @@
 #define ASSERT_CONF_RETURNS  1
 
 #ifndef EEPROM_CONF_SIZE
-#define EEPROM_CONF_SIZE				1024
+#define EEPROM_CONF_SIZE				1024000
 #endif
 
 #define w_memcpy memcpy

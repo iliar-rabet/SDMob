@@ -1,0 +1,281 @@
+./os/lib/heapmem.c:135:typedef struct chunk {
+./os/lib/dbg-io/strformat.c:59:typedef unsigned int FormatFlags;
+./os/lib/fs/fat/ff.c:80:typedef struct {
+./os/lib/fs/fat/ff.c:5819:typedef struct {
+./os/storage/antelope/index-memhash.c:71:typedef struct hash_item hash_item_t;
+./os/storage/antelope/index-memhash.c:73:typedef hash_item_t hash_map_t[DB_MEMHASH_TABLE_SIZE];
+./os/storage/antelope/lvm.c:74:typedef struct variable variable_t;
+./os/storage/antelope/lvm.c:81:typedef struct derivation derivation_t;
+./os/storage/antelope/index-maxheap.c:81:typedef uint16_t maxheap_key_t;
+./os/storage/antelope/index-maxheap.c:82:typedef uint16_t maxheap_value_t;
+./os/storage/antelope/index-maxheap.c:91:typedef struct heap_node heap_node_t;
+./os/storage/antelope/index-maxheap.c:101:typedef struct bucket bucket_t;
+./os/storage/antelope/index-maxheap.c:109:typedef struct heap heap_t;
+./os/net/nbr-table.c:65:typedef struct nbr_table_key {
+./os/net/app-layer/mqtt/mqtt.c:72:typedef enum {
+./os/net/app-layer/mqtt/mqtt.c:97:typedef enum {
+./os/net/app-layer/mqtt/mqtt.c:110:typedef enum {
+./os/net/app-layer/mqtt/mqtt.c:119:typedef enum {
+./os/net/app-layer/mqtt/mqtt.c:125:typedef enum {
+./os/net/mac/framer/frame802154.c:82:typedef struct {
+./os/net/mac/ble/ble-l2cap.c:63:typedef struct {
+./os/net/mac/ble/ble-l2cap.c:72:typedef struct {
+./os/net/mac/ble/ble-l2cap.c:79:typedef struct {
+./os/net/mac/csma/csma-security.c:85:typedef struct {
+./os/net/mac/tsch/sixtop/sixp-nbr.c:60:typedef struct sixp_nbr {
+./os/net/mac/tsch/sixtop/sixp-trans.c:57:typedef struct sixp_trans {
+./os/net/ipv6/uip-nameserver.c:56:typedef struct uip_nameserver_record {
+./os/net/ipv6/multicast/mpl.c:84:typedef struct seed_id_s {
+./os/net/ipv6/multicast/roll-tm.c:69:typedef union seed_id_u {
+./os/net/ipv6/multicast/roll-tm.c:77:typedef uip_ip6addr_t seed_id_t;
+./os/net/security/tinydtls/tests/secure-server.c:125:typedef enum { UNKNOWN=0, DTLS=1 } protocol_t;
+./os/net/security/tinydtls/tests/secure-server.c:133:typedef enum { 
+./os/net/security/tinydtls/tests/secure-server.c:136:typedef struct {
+./os/net/security/tinydtls/tests/secure-server.c:149:typedef struct bio_dgram_data_st
+./os/net/security/tinydtls/tests/dtls-client.c:41:typedef struct {
+./os/net/security/tinydtls/sha2/sha2.c:133:typedef uint8_t  sha2_byte;	/* Exactly 1 byte */
+./os/net/security/tinydtls/sha2/sha2.c:134:typedef uint32_t sha2_word32;	/* Exactly 4 bytes */
+./os/net/security/tinydtls/sha2/sha2.c:135:typedef uint64_t sha2_word64;	/* Exactly 8 bytes */
+./os/net/security/tinydtls/sha2/sha2.c:139:typedef u_int8_t  sha2_byte;	/* Exactly 1 byte */
+./os/net/security/tinydtls/sha2/sha2.c:140:typedef u_int32_t sha2_word32;	/* Exactly 4 bytes */
+./os/net/security/tinydtls/sha2/sha2.c:141:typedef u_int64_t sha2_word64;	/* Exactly 8 bytes */
+./os/services/ipso-objects/ipso-leds-control.c:69:typedef struct led_state {
+./tests/06-script-base/code-test-memb/test-memb-api.c:41:typedef struct test_struct {
+./tests/07-simulation-base/code-data-structures/test-data-structures.c:50:typedef struct demo_struct_s {
+./tests/13-ieee802154/code-panid-handling/test-panid-handling.c:43:typedef enum {SUCCESS, FAILURE} result_t;
+./tests/13-ieee802154/code-panid-handling/test-panid-handling.c:44:typedef enum {NO_ADDR, SHORT, LONG} addr_mode_t;
+./tests/13-ieee802154/code-panid-handling/test-panid-handling.c:45:typedef enum {NOT_PRESENT, PRESENT} panid_mode_t;
+./tests/13-ieee802154/code-panid-handling/test-panid-handling.c:46:typedef enum {OFF, ON} panid_cmpr_mode_t;
+./tests/13-ieee802154/code-panid-handling/test-panid-handling.c:48:typedef struct {
+./tests/13-ieee802154/code-panid-handling/test-panid-handling.c:106:typedef void (*setup_fcf_p)(const panid_test_def *, frame802154_fcf_t *);
+./tests/18-coap-lwm2m/example-lwm2m-standalone/lwm2m/coap-hex/coap-hex.c:58:typedef union {
+./tests/18-coap-lwm2m/example-lwm2m-standalone/lwm2m/coap-ipv4/coap-ipv4.c:66:typedef union {
+./tests/20-packet-parsing/packet-injector/packet-injector.c:70:typedef bool (*protocol_function_t)(char *, int);
+./arch/cpu/cc2538/usb/usb-arch.c:109:typedef struct _USBBuffer usb_buffer;
+./arch/cpu/cc2538/usb/usb-arch.c:120:typedef struct usb_endpoint usb_endpoint_t;
+./arch/cpu/cc2538/usb/usb-serial.c:121:typedef struct _USBBuffer usb_buffer;
+./arch/cpu/cc2538/dev/uart.c:149:typedef struct {
+./arch/cpu/cc2538/dev/uart.c:153:typedef struct {
+./arch/cpu/cc2538/dev/cc2538-rf.c:121:typedef struct output_config {
+./arch/cpu/cc2538/dev/spi-legacy.c:166:typedef struct {
+./arch/cpu/cc2538/dev/spi-legacy.c:170:typedef struct {
+./arch/cpu/cc2538/dev/spi-arch.c:84:typedef struct {
+./arch/cpu/cc2538/dev/spi-arch.c:108:typedef struct spi_locks_s {
+./arch/cpu/nrf52832/ble/ble-mac.c:80:typedef struct {
+./arch/cpu/cc26x0-cc13x0/rf-core/rf-core.c:94:typedef ChipType_t chip_type_t;
+./arch/cpu/cc26x0-cc13x0/rf-core/ieee-mode.c:139:typedef struct output_config {
+./arch/cpu/cc26x0-cc13x0/rf-core/rf-ble.c:111:typedef struct output_config {
+./arch/cpu/cc26x0-cc13x0/rf-core/ble-hal/ble-hal-cc26xx.c:143:typedef struct {
+./arch/cpu/cc26x0-cc13x0/rf-core/ble-hal/ble-hal-cc26xx.c:204:typedef struct {
+./arch/cpu/cc26x0-cc13x0/lib/cc2640r2-sdk/driverlib/flash.c:97:typedef uint32_t (* FlashPrgPointer_t) (uint8_t *, uint32_t, uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc2640r2-sdk/driverlib/flash.c:99:typedef uint32_t (* FlashSectorErasePointer_t) (uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc2640r2-sdk/driverlib/osc.c:87:typedef struct {
+./arch/cpu/cc26x0-cc13x0/lib/cc2640r2-sdk/driverlib/sys_ctrl.c:76:typedef struct {
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/flash.c:97:typedef uint32_t (* FlashPrgPointer_t) (uint8_t *, uint32_t, uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/flash.c:99:typedef uint32_t (* FlashSectorErasePointer_t) (uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/osc.c:84:typedef struct {
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:46:typedef void(*aes_ecb_encrypt_t)(uint8_t *, uint16_t, uint8_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:49:typedef void(*aes_ecb_decrypt_t)(uint8_t *, uint16_t, uint8_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:71:typedef int8_t(*aes_ccm_encrypt_t)(uint8_t, uint8_t, uint8_t *, uint8_t *,
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:76:typedef int8_t(*aes_ccm_decrypt_t)(uint8_t, uint8_t, uint8_t *, uint8_t *,
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:109:typedef uint8_t(*aes_ctr_encrypt_t)(uint8_t *, uint16_t, uint8_t *, uint8_t *,
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:113:typedef uint8_t(*aes_ctr_decrypt_t)(uint8_t *, uint16_t, uint8_t *, uint8_t *,
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:197:typedef uint8_t(*ecc_keygen_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:200:typedef uint8_t(*ecdsa_sign_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:203:typedef uint8_t(*ecdsa_verify_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:206:typedef uint8_t(*ecdh_computeSharedSecret_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:259:typedef uint8_t(*sha256_full_t)(SHA256_memory_t *, uint8_t *, uint8_t *, uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:262:typedef uint8_t(*sha256_init_t)(SHA256_memory_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:265:typedef uint8_t(*sha256_process_t)(SHA256_memory_t *, uint8_t *, uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/rom_crypto.c:268:typedef uint8_t(*sha256_final_t)(SHA256_memory_t *, uint8_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc13xxware/driverlib/sys_ctrl.c:78:typedef struct {
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/flash.c:97:typedef uint32_t (* FlashPrgPointer_t) (uint8_t *, uint32_t, uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/flash.c:99:typedef uint32_t (* FlashSectorErasePointer_t) (uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/osc.c:84:typedef struct {
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:46:typedef void(*aes_ecb_encrypt_t)(uint8_t *, uint16_t, uint8_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:49:typedef void(*aes_ecb_decrypt_t)(uint8_t *, uint16_t, uint8_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:71:typedef int8_t(*aes_ccm_encrypt_t)(uint8_t, uint8_t, uint8_t *, uint8_t *,
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:76:typedef int8_t(*aes_ccm_decrypt_t)(uint8_t, uint8_t, uint8_t *, uint8_t *,
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:109:typedef uint8_t(*aes_ctr_encrypt_t)(uint8_t *, uint16_t, uint8_t *, uint8_t *,
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:113:typedef uint8_t(*aes_ctr_decrypt_t)(uint8_t *, uint16_t, uint8_t *, uint8_t *,
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:197:typedef uint8_t(*ecc_keygen_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:200:typedef uint8_t(*ecdsa_sign_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:203:typedef uint8_t(*ecdsa_verify_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:206:typedef uint8_t(*ecdh_computeSharedSecret_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:259:typedef uint8_t(*sha256_full_t)(SHA256_memory_t *, uint8_t *, uint8_t *, uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:262:typedef uint8_t(*sha256_init_t)(SHA256_memory_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:265:typedef uint8_t(*sha256_process_t)(SHA256_memory_t *, uint8_t *, uint32_t);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/rom_crypto.c:268:typedef uint8_t(*sha256_final_t)(SHA256_memory_t *, uint8_t *);
+./arch/cpu/cc26x0-cc13x0/lib/cc26xxware/driverlib/sys_ctrl.c:78:typedef struct {
+./arch/cpu/cc26x0-cc13x0/dev/spi-arch.c:38:typedef struct spi_locks_s {
+./arch/cpu/cc26x0-cc13x0/dev/spi-arch.c:48:typedef struct board_spi_controller_s {
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/prop-mode.c:93:typedef enum {
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/prop-mode.c:156:typedef uint16_t lensz_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/prop-mode.c:171:typedef rfc_propRxOutput_t rx_output_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/prop-mode.c:173:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/data-queue.c:58:typedef union {
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/data-queue.c:63:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/ieee-mode.c:138:typedef uint8_t lensz_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/ieee-mode.c:144:typedef enum {
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/ieee-mode.c:151:typedef rfc_ieeeRxOutput_t rx_output_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/ieee-mode.c:152:typedef rfc_CMD_IEEE_MOD_FILT_t cmd_mod_filt_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/ieee-mode.c:153:typedef rfc_CMD_IEEE_CCA_REQ_t cmd_cca_req_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/ieee-mode.c:155:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/ble-beacond.c:130:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/sched.c:99:typedef rfc_CMD_BLE_ADV_NC_t ble_cmd_adv_nc_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/rf/sched.c:101:typedef rfc_CMD_BLE5_ADV_NC_t ble_cmd_adv_nc_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:73:typedef enum RF_FsmEvent_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:85:typedef enum RF_CoreStatus_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:95:typedef enum RF_PowerConstraintSrc_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:105:typedef enum RF_RatMode_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:112:typedef enum RF_RatStatus_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:119:typedef enum RF_ScheduleCmdStatus_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:235:/* FSM typedef. */
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:236:typedef void (*RF_FsmStateFxn)(RF_Object*, RF_FsmEvent const);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:239:typedef struct RF_RatChannel_s RF_RatChannel;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:253:typedef struct RF_RatModule_s RF_RatModule;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:265:typedef struct RF_CoreState_s RF_CoreState;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:278:typedef union RF_RatSyncCmd_u RF_RatSyncCmd;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:288:typedef union RF_ConfigurePaCmd_u RF_ConfigurePaCmd;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:298:typedef struct RF_CmdQ_s RF_CmdQ;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26X2_multiMode.c:312:typedef struct RF_Sch_s RF_Sch_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:72:typedef enum RF_FsmEvent_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:84:typedef enum RF_CoreStatus_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:94:typedef enum RF_PowerConstraintSrc_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:104:typedef enum RF_RatMode_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:111:typedef enum RF_RatStatus_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:118:typedef enum RF_ScheduleCmdStatus_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:220:/* FSM typedef. */
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:221:typedef void (*RF_FsmStateFxn)(RF_Object* obj, RF_FsmEvent const e);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:224:typedef struct RF_RatChannel_s RF_RatChannel;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:238:typedef struct RF_RatModule_s RF_RatModule;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:250:typedef struct RF_CoreState_s RF_CoreState;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:263:typedef union RF_RatSyncCmd_u RF_RatSyncCmd;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:273:typedef struct RF_CmdQ_s RF_CmdQ;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_multiMode.c:287:typedef struct RF_Sch_s RF_Sch_t;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:70:typedef enum RF_FsmEvent_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:79:typedef enum RF_CoreStatus_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:88:typedef enum RF_PowerConstraintSrc_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:98:typedef enum RF_RatMode_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:105:typedef enum RF_RatStatus_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:193:/* FSM typedef. */
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:194:typedef void (*RF_FsmStateFxn)(RF_Object* obj, RF_FsmEvent const e);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:197:typedef struct RF_RatChannel_s RF_RatChannel;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:211:typedef struct RF_RatModule_s RF_RatModule;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:223:typedef struct RF_CoreState_s RF_CoreState;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:236:typedef union RF_RatSyncCmd_u RF_RatSyncCmd;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/rf/RFCC26XX_singleMode.c:246:typedef struct RF_CmdQ_s RF_CmdQ;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/power/PowerCC26X2_calibrateRCOSC.c:90:typedef enum PowerCC26X2_FsmResult_ {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/sha2/SHA2CC26X2.c:59:typedef enum {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/gpio/GPIOCC26XX.c:140:typedef struct PinConfig {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/gpio/GPIOCC26XX.c:151:typedef struct PortCallbackInfo {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/spi/SPICC26XXDMA.c:65:/* Local typedef only. Used to easily migrate hwattrs versions */
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/spi/SPICC26XXDMA.c:66:typedef SPICC26XXDMA_HWAttrsV1 SPICC26XXDMA_HWAttrs;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/drivers/timer/GPTimerCC26XX.c:81:typedef struct GPTimerCC26XX_LUT
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/flash.c:97:typedef uint32_t (* FlashPrgPointer_t) (uint8_t *, uint32_t, uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/flash.c:99:typedef uint32_t (* FlashSectorErasePointer_t) (uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/osc.c:88:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:46:typedef void(*aes_ecb_encrypt_t)(uint8_t *, uint16_t, uint8_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:49:typedef void(*aes_ecb_decrypt_t)(uint8_t *, uint16_t, uint8_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:71:typedef int8_t(*aes_ccm_encrypt_t)(uint8_t, uint8_t, uint8_t *, uint8_t *,
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:76:typedef int8_t(*aes_ccm_decrypt_t)(uint8_t, uint8_t, uint8_t *, uint8_t *,
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:109:typedef uint8_t(*aes_ctr_encrypt_t)(uint8_t *, uint16_t, uint8_t *, uint8_t *,
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:113:typedef uint8_t(*aes_ctr_decrypt_t)(uint8_t *, uint16_t, uint8_t *, uint8_t *,
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:197:typedef uint8_t(*ecc_keygen_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:200:typedef uint8_t(*ecdsa_sign_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:203:typedef uint8_t(*ecdsa_verify_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:206:typedef uint8_t(*ecdh_computeSharedSecret_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:259:typedef uint8_t(*sha256_full_t)(SHA256_memory_t *, uint8_t *, uint8_t *, uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:262:typedef uint8_t(*sha256_init_t)(SHA256_memory_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:265:typedef uint8_t(*sha256_process_t)(SHA256_memory_t *, uint8_t *, uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/rom_crypto.c:268:typedef uint8_t(*sha256_final_t)(SHA256_memory_t *, uint8_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc26x0/driverlib/sys_ctrl.c:76:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/flash.c:97:typedef uint32_t (* FlashPrgPointer_t) (uint8_t *, uint32_t, uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/flash.c:99:typedef uint32_t (* FlashSectorErasePointer_t) (uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/osc.c:88:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:46:typedef void(*aes_ecb_encrypt_t)(uint8_t *, uint16_t, uint8_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:49:typedef void(*aes_ecb_decrypt_t)(uint8_t *, uint16_t, uint8_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:71:typedef int8_t(*aes_ccm_encrypt_t)(uint8_t, uint8_t, uint8_t *, uint8_t *,
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:76:typedef int8_t(*aes_ccm_decrypt_t)(uint8_t, uint8_t, uint8_t *, uint8_t *,
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:109:typedef uint8_t(*aes_ctr_encrypt_t)(uint8_t *, uint16_t, uint8_t *, uint8_t *,
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:113:typedef uint8_t(*aes_ctr_decrypt_t)(uint8_t *, uint16_t, uint8_t *, uint8_t *,
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:197:typedef uint8_t(*ecc_keygen_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:200:typedef uint8_t(*ecdsa_sign_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:203:typedef uint8_t(*ecdsa_verify_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:206:typedef uint8_t(*ecdh_computeSharedSecret_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:259:typedef uint8_t(*sha256_full_t)(SHA256_memory_t *, uint8_t *, uint8_t *, uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:262:typedef uint8_t(*sha256_init_t)(SHA256_memory_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:265:typedef uint8_t(*sha256_process_t)(SHA256_memory_t *, uint8_t *, uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/rom_crypto.c:268:typedef uint8_t(*sha256_final_t)(SHA256_memory_t *, uint8_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x0/driverlib/sys_ctrl.c:76:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x2_cc26x2/driverlib/flash.c:97:typedef uint32_t (* FlashPrgPointer_t) (uint8_t *, uint32_t, uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x2_cc26x2/driverlib/flash.c:99:typedef uint32_t (* FlashSectorErasePointer_t) (uint32_t);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x2_cc26x2/driverlib/osc.c:105:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x2_cc26x2/driverlib/osc.c:347:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x2_cc26x2/driverlib/rom_crypto.c:102:typedef uint8_t(*ecc_keygen_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x2_cc26x2/driverlib/rom_crypto.c:105:typedef uint8_t(*ecdsa_sign_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x2_cc26x2/driverlib/rom_crypto.c:108:typedef uint8_t(*ecdsa_verify_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/source/ti/devices/cc13x2_cc26x2/driverlib/rom_crypto.c:111:typedef uint8_t(*ecdh_computeSharedSecret_t)(uint32_t *, uint32_t *,uint32_t *, uint32_t *, uint32_t *);
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/TimerPCC26XX_nortos.c:51:typedef struct _TimerP_Obj {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/SwiP_nortos.c:51:typedef enum {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/SwiP_nortos.c:58:typedef uint32_t SwiP_LockState;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/SwiP_nortos.c:65:typedef struct SwiP_Obj {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/HwiPCC26XX_nortos.c:50:typedef struct _HwiP_Obj {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/HwiPCC26XX_nortos.c:56:typedef struct _Hwi_NVIC {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/ClockPTimer_nortos.c:51:typedef struct _ClockP_Module_State {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/ClockPTimer_nortos.c:66:typedef struct _ClockP_Obj {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/MutexP_nortos.c:42:typedef struct _MutexP_Config {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/SystemP_nortos.c:68:typedef struct ParseData {
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/SystemP_nortos.c:82:typedef uint32_t UIntMax;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/SystemP_nortos.c:83:typedef int32_t  IntMax;
+./arch/cpu/simplelink-cc13xx-cc26xx/lib/coresdk_cc13xx_cc26xx/kernel/nortos/dpl/SemaphoreP_nortos.c:47:typedef struct _SemaphoreP_Obj {
+./arch/cpu/simplelink-cc13xx-cc26xx/dev/random.c:53:typedef struct {
+./arch/cpu/simplelink-cc13xx-cc26xx/dev/rtimer-arch.c:56:typedef void (*isr_fxn_t)(void);
+./arch/cpu/simplelink-cc13xx-cc26xx/dev/rtimer-arch.c:57:typedef void (*hwi_dispatch_fxn_t)(void);
+./arch/cpu/simplelink-cc13xx-cc26xx/dev/spi-arch.c:55:typedef struct {
+./arch/platform/nrf52dk/rtt/segger-rtt-printf.c:74:typedef struct {
+./arch/platform/jn516x/dev/dr1175/light-sensor.c:53:typedef enum {
+./arch/platform/jn516x/dev/dr1175/ht-sensor.c:52:typedef enum {
+./arch/platform/jn516x/dev/dr1174/button-sensor.c:51:typedef enum {
+./arch/platform/jn516x/dev/dr1174/button-sensor.c:84:typedef enum {
+./arch/platform/jn516x/dev/dr1199/pot-sensor.c:52:typedef enum {
+./arch/platform/zoul/dev/adc-sensors.c:58:typedef struct {
+./arch/platform/zoul/dev/adc-sensors.c:64:typedef struct {
+./arch/platform/zoul/dev/weather-meter.c:84:typedef struct {
+./arch/platform/zoul/dev/weather-meter.c:91:typedef struct {
+./arch/platform/zoul/dev/weather-meter.c:99:typedef struct {
+./arch/platform/zoul/dev/weather-meter.c:105:typedef struct {
+./arch/platform/zoul/dev/weather-meter.c:115:typedef struct {
+./arch/platform/zoul/dev/bmpx8x.c:60:typedef struct {
+./arch/platform/zoul/dev/bmpx8x.c:74:typedef struct {
+./arch/platform/zoul/dev/rgb-bl-lcd.c:58:typedef struct {
+./arch/platform/simplelink/cc13xx-cc26xx/sensortag/mpu-9250-sensor.c:203:typedef struct {
+./arch/platform/simplelink/cc13xx-cc26xx/sensortag/opt-3001-sensor.c:137:typedef struct {
+./arch/platform/simplelink/cc13xx-cc26xx/sensortag/hdc-1000-sensor.c:102:typedef struct {
+./arch/platform/simplelink/cc13xx-cc26xx/sensortag/bmp-280-sensor.c:123:typedef struct {
+./arch/platform/simplelink/cc13xx-cc26xx/sensortag/bmp-280-sensor.c:142:typedef enum {
+./arch/platform/simplelink/cc13xx-cc26xx/sensortag/tmp-007-sensor.c:124:typedef struct {
+./arch/platform/cc26x0-cc13x0/sensortag/hdc-1000-sensor.c:89:typedef struct sensor_data {
+./arch/platform/cc26x0-cc13x0/sensortag/bmp-280-sensor.c:108:typedef struct bmp_280_calibration {
+./arch/platform/native/clock.c:45:typedef struct clock_timespec_s {
+./arch/dev/disk/mmc/mmc.c:151:typedef enum {
+./examples/6tisch/sixtop/sf-simple.c:55:typedef struct {
+./examples/6tisch/6p-packet/test-sf.c:82:typedef void (*test_func)(const linkaddr_t *peer_addr);
+./examples/6tisch/etsi-plugtest-2017/sf-plugtest.c:59:typedef struct {
+./examples/6tisch/etsi-plugtest-2017/sf-plugtest.c:64:typedef struct {
+./examples/6tisch/etsi-plugtest-2017/sf-plugtest.c:71:typedef void subcmd(shell_output_func output, subcmd_args_t *args);
+./examples/6tisch/etsi-plugtest-2017/sf-plugtest.c:73:typedef void (req_handler_t)(const linkaddr_t *peer_addr,
+./examples/6tisch/etsi-plugtest-2017/sf-plugtest.c:75:typedef void (res_handler_t)(const linkaddr_t *peer_addr, sixp_pkt_rc_t rc,
+./examples/mqtt-client/mqtt-client.c:192:typedef struct mqtt_client_config {
+./examples/sensniff/sensniff.c:80:typedef struct cmd_in_s {
+./examples/platform-specific/nrf52dk/mqtt-demo/mqtt-demo.c:152:typedef struct mqtt_client_config {
+./examples/platform-specific/jn516x/tsch/simple-sensor-network/node/node.c:56:typedef enum {
+./examples/platform-specific/jn516x/tsch/simple-sensor-network/node/node.c:64:typedef struct {
+./examples/platform-specific/cc2538-common/test-pwm.c:65:typedef struct {
+./examples/platform-specific/zoul/at-test/at-master-test.c:88:typedef struct {
+./examples/platform-specific/cc26x0-cc13x0/very-sleepy-demo/very-sleepy-demo.c:81:typedef struct sleepy_config_s {
+./examples/platform-specific/cc26x0-cc13x0/cc26x0-web-demo/httpd-simple.c:199:typedef struct page {
+./examples/platform-specific/cc26x0-cc13x0/cc26x0-web-demo/httpd-simple.c:252:typedef char (*httpd_simple_script_t)(struct httpd_state *s);
+./examples/coap/coap-plugtest-server/resources/res-plugtest-separate.c:64:typedef struct application_separate_store {
+./examples/coap/coap-example-server/resources/res-separate.c:57:typedef struct application_separate_store {
+./examples/libs/data-structures/data-structures.c:55:typedef struct demo_struct_s {

@@ -66,7 +66,8 @@ uiplib_ip6addrconv(const char *addrstr, uip_ip6addr_t *ipaddr)
 
   value = 0;
   zero = -1;
-  if(*addrstr == '[') addrstr++;
+
+  if(*addrstr == '[')	addrstr++;
 
   for(len = 0; len < sizeof(uip_ip6addr_t) - 1; addrstr++) {
     c = *addrstr;

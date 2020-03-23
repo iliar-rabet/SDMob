@@ -47,6 +47,7 @@
 #include "sys/energest.h"
 #include "sys/stack-check.h"
 #include "dev/watchdog.h"
+#include "sys/autostart.h"
 
 #include "net/queuebuf.h"
 #include "net/app-layer/coap/coap-engine.h"

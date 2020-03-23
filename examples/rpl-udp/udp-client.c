@@ -3,6 +3,7 @@
 #include "random.h"
 #include "net/netstack.h"
 #include "net/ipv6/simple-udp.h"
+//#include "net/ipv6/uiplib.h"
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
@@ -29,8 +30,37 @@ udp_rx_callback(struct simple_udp_connection *c,
          const uint8_t *data,
          uint16_t datalen)
 {
+	uip_ip6addr_t *rcvd_ip;
+	char buff[40];
+//	data++;	
+  LOG_INFO("Received response ");
 
-  LOG_INFO("Received response '%.*s' from ", datalen, (char *) data);
+/*
+	for(int i=0; i < 8; i++) {
+		if ( i == 7 ) {
+				buff[35] = '0';
+				buff[36] = ( *data++ >> 8 ) & 0xff;
+				buff[37] = '0';
+				buff[38] = ( *data >> 8 ) & 0xff;
+				buff[39] = '\0';
+		} else {
+				buff[5*i] = '0';
+				buff[5*i+1] = ( *data++ >> 8 ) & 0xff;
+				buff[5*i+2] = '0';
+				buff[5*i+3] = ( *data++ >> 8 ) & 0xff;
+				buff[5*i+4] = ':';
+		}
+	}
+*/
+
+	for (int i = 0; i < 16; i++) printf("%c", (((*data++ >> 8 ) & 0xff ) ));
+	
+
+//	if(!uiplib_ip6addrconv((char *) buff, rcvd_ip)) return;
+	// Logging received IP address
+	LOG_INFO_6ADDR(rcvd_ip);
+//	printf("%s", buff);
+//	printf(" from ");
   LOG_INFO_6ADDR(sender_addr);
 #if LLSEC802154_CONF_ENABLED
   LOG_INFO_(" LLSEC LV:%d", uipbuf_get_attr(UIPBUF_ATTR_LLSEC_LEVEL));
@@ -44,6 +74,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
   static struct etimer periodic_timer;
   static unsigned count;
   static char str[32];
+  const char *string;
   uip_ipaddr_t dest_ipaddr;
 
   PROCESS_BEGIN();
@@ -64,7 +95,9 @@ PROCESS_THREAD(udp_client_process, ev, data)
       snprintf(str, sizeof(str), "hello %d", count);
       simple_udp_sendto(&udp_conn, str, strlen(str), &dest_ipaddr);
       count++;
+      //rpl_neighbor_print_list(string);
     } else {
+      LOG_INFO("%d %d\n", NETSTACK_ROUTING.node_is_reachable(), NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr));
       LOG_INFO("Not reachable yet\n");
     }
 
