@@ -3,7 +3,7 @@
 #include "random.h"
 #include "net/netstack.h"
 #include "net/ipv6/simple-udp.h"
-//#include "net/ipv6/uiplib.h"
+#include "net/ipv6/uiplib.h"
 
 #include "sys/log.h"
 #define LOG_MODULE "App"
@@ -55,8 +55,12 @@ udp_rx_callback(struct simple_udp_connection *c,
 
 	for (i = 0; i < 16; i++) printf("%c", (((*data++ >> 8 ) & 0xff ) ));
 	
-
-	if(!uiplib_ip6addrconv((char *) buff, rcvd_ip)) return;
+  rcvd_ip=NULL;
+	if(!uiplib_ip6addrconv((char *) buff, rcvd_ip)) {
+    printf("here error!!!\n");
+    return;
+    }
+  
 	// Logging received IP address
 	LOG_INFO_6ADDR(rcvd_ip);
 	printf("%s", buff);
