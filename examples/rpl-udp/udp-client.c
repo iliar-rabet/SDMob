@@ -35,8 +35,8 @@ udp_rx_callback(struct simple_udp_connection *c,
 	data++;	
   LOG_INFO("Received response ");
 
-
-	for(int i=0; i < 8; i++) {
+  int i;    
+	for(i=0; i < 8; i++) {
 		if ( i == 7 ) {
 				buff[35] = '0';
 				buff[36] = ( *data++ >> 8 ) & 0xff;
@@ -53,7 +53,7 @@ udp_rx_callback(struct simple_udp_connection *c,
 	}
 
 
-	for (int i = 0; i < 16; i++) printf("%c", (((*data++ >> 8 ) & 0xff ) ));
+	for (i = 0; i < 16; i++) printf("%c", (((*data++ >> 8 ) & 0xff ) ));
 	
 
 	if(!uiplib_ip6addrconv((char *) buff, rcvd_ip)) return;
@@ -74,7 +74,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
   static struct etimer periodic_timer;
   static unsigned count;
   static char str[32];
-  const char *string;
+  //const char *string;
   uip_ipaddr_t dest_ipaddr;
 
   PROCESS_BEGIN();

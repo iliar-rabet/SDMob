@@ -65,8 +65,8 @@ udp_rx_callback(struct simple_udp_connection *c,
   LOG_INFO_6ADDR(sender_addr);
   LOG_INFO_("\n");
 
-	
-	for (int i = 0; i < 16; i++) temp[i] = sender_addr->u8[i] + '0';
+	int i;
+	for (i = 0; i < 16; i++) temp[i] = sender_addr->u8[i] + '0';
 	
 
 #if WITH_SERVER_REPLY
