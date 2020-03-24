@@ -21,6 +21,22 @@ static struct simple_udp_connection udp_conn;
 PROCESS(udp_client_process, "UDP client");
 AUTOSTART_PROCESSES(&udp_client_process);
 /*---------------------------------------------------------------------------*/
+char *replace_str(char *str, char *orig, char *rep)
+{
+  static char buffer[100];
+  char *p;
+
+  if(!(p = strstr(str, orig)))  // Is 'orig' even in 'str'?
+    return str;
+
+  strncpy(buffer, str, p-str); // Copy characters from 'str' start to 'orig' st$
+  buffer[p-str] = '\0';
+
+  sprintf(buffer+(p-str), "%s%s", rep, p+strlen(orig));
+  printf("rep:%s\n",buffer);
+  return buffer;
+}
+
 static void
 udp_rx_callback(struct simple_udp_connection *c,
          const uip_ipaddr_t *sender_addr,
@@ -30,39 +46,41 @@ udp_rx_callback(struct simple_udp_connection *c,
          const uint8_t *data,
          uint16_t datalen)
 {
-	uip_ip6addr_t *rcvd_ip;
+	uip_ip6addr_t rcvd_ip;
 	char buff[40];
 	data++;	
   LOG_INFO("Received response ");
+  printf("\ndata is:%s\n",data);
+  // int i;    
+	// for(i=0; i < 8; i++) {
+	// 	if ( i == 7 ) {
+	// 			buff[35] = '0';
+	// 			buff[36] = ( *data++ >> 8 ) & 0xff;
+	// 			buff[37] = '0';
+	// 			buff[38] = ( *data >> 8 ) & 0xff;
+	// 			buff[39] = '\0';
+	// 	} else {
+	// 			buff[5*i] = '0';
+	// 			buff[5*i+1] = ( *data++ >> 8 ) & 0xff;
+	// 			buff[5*i+2] = '0';
+	// 			buff[5*i+3] = ( *data++ >> 8 ) & 0xff;
+	// 			buff[5*i+4] = ':';
+	// 	}
+	// }
 
-  int i;    
-	for(i=0; i < 8; i++) {
-		if ( i == 7 ) {
-				buff[35] = '0';
-				buff[36] = ( *data++ >> 8 ) & 0xff;
-				buff[37] = '0';
-				buff[38] = ( *data >> 8 ) & 0xff;
-				buff[39] = '\0';
-		} else {
-				buff[5*i] = '0';
-				buff[5*i+1] = ( *data++ >> 8 ) & 0xff;
-				buff[5*i+2] = '0';
-				buff[5*i+3] = ( *data++ >> 8 ) & 0xff;
-				buff[5*i+4] = ':';
-		}
-	}
 
-
-	for (i = 0; i < 16; i++) printf("%c", (((*data++ >> 8 ) & 0xff ) ));
+	// for (i = 0; i < 16; i++) printf("%c", (((*data++ >> 8 ) & 0xff ) ));
 	
-  rcvd_ip=NULL;
-	if(!uiplib_ip6addrconv((char *) buff, rcvd_ip)) {
+  char buf[100];
+  strcpy(buf,replace_str((char *)data,"::",":0:0:0:"));
+  printf("buf:%s\n",buf);
+	if(!uiplib_ip6addrconv(buf, &rcvd_ip)) {
     printf("here error!!!\n");
     return;
     }
   
 	// Logging received IP address
-	LOG_INFO_6ADDR(rcvd_ip);
+	LOG_INFO_6ADDR(&rcvd_ip);
 	printf("%s", buff);
 	printf(" from ");
   LOG_INFO_6ADDR(sender_addr);

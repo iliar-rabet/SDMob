@@ -66,13 +66,20 @@ udp_rx_callback(struct simple_udp_connection *c,
   LOG_INFO_("\n");
 
 	int i;
-	for (i = 0; i < 16; i++) temp[i] = sender_addr->u8[i] + '0';
-	
+	for (i = 0; i < 16; i++) {
+    temp[i] = sender_addr->u8[i] + '0';
+  }
+	printf("temp:%s\n",temp);
 
+  char buf[UIPLIB_IPV6_MAX_STR_LEN];
+  uiplib_ipaddr_snprint(buf, sizeof(buf), sender_addr);
+  printf("buf:%s\n", buf);
+
+  printf("sender_addr: %s\n",(char *)sender_addr);
 #if WITH_SERVER_REPLY
   /* send back the same string to the client as an echo reply */
   LOG_INFO("Sending response.\n");
-  simple_udp_sendto(&udp_conn, temp, sizeof(temp), sender_addr);
+  simple_udp_sendto(&udp_conn, buf, sizeof(buf), sender_addr);
 #endif /* WITH_SERVER_REPLY */
 }
 /*---------------------------------------------------------------------------*/
