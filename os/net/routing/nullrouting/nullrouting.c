@@ -40,6 +40,7 @@
  */
 
 #include "net/routing/routing.h"
+#include <stdio.h>
 
 /*---------------------------------------------------------------------------*/
 static void
@@ -90,6 +91,7 @@ node_has_joined(void)
 static int
 node_is_reachable(void)
 {
+  printf("in the node_is_reachable\n");
   return 1;
 }
 /*---------------------------------------------------------------------------*/

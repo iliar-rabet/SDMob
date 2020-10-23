@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.tcc": "c",
+        "fstream": "c",
+        "string": "c",
+        "string_view": "c",
+        "*.py": "c",
+        "*.pcap": "c"
+    }
+}

@@ -245,12 +245,15 @@ PROCESS_THREAD(slip_process, ev, data)
   PROCESS_BEGIN();
 
   rxbuf_init();
+  static struct etimer et;
+  etimer_set(&et, CLOCK_SECOND/50);
 
   while(1) {
-    PROCESS_YIELD_UNTIL(ev == PROCESS_EVENT_POLL);
+    // PROCESS_YIELD_UNTIL(ev == PROCESS_EVENT_POLL);
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et));
 
     slip_active = 1;
-
+    printf("\n");
     /* Move packet from rxbuf to buffer provided by uIP. */
     uip_len = slip_poll_handler(uip_buf, UIP_BUFSIZE);
 
@@ -260,6 +263,7 @@ PROCESS_THREAD(slip_process, ev, data)
       }
       tcpip_input();
     }
+    etimer_reset(&et);
   }
 
   PROCESS_END();

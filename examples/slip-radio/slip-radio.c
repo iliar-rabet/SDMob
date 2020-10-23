@@ -116,9 +116,9 @@ packet_sent(void *ptr, int status, int transmissions)
   uint8_t sid;
   int pos;
   sid = *((uint8_t *)ptr);
-  LOG_DBG("Slip-radio: packet sent! sid: %d, status: %d, tx: %d\n",
+  printf("Slip-radio: packet sent! sid: %d, status: %d, tx: %d\n",
           sid, status, transmissions);
-  /* packet callback from lower layers */
+    /* packet callback from lower layers */
   /*  neighbor_info_packet_sent(status, transmissions); */
   pos = 0;
   buf[pos++] = '!';
@@ -132,6 +132,7 @@ packet_sent(void *ptr, int status, int transmissions)
 static int
 slip_radio_cmd_handler(const uint8_t *data, int len)
 {
+  printf("DATA:%s\n",data);
   int i;
   if(data[0] == '!') {
     /* should send out stuff to the radio - ignore it as IP */
@@ -139,7 +140,7 @@ slip_radio_cmd_handler(const uint8_t *data, int len)
     if(data[1] == 'S') {
       int pos;
       packet_ids[packet_pos] = data[2];
-
+      printf("packet_ids:%u\n",packet_ids[packet_pos]);
       packetbuf_clear();
       pos = packetutils_deserialize_atts(&data[3], len - 3);
       if(pos < 0) {
@@ -154,7 +155,7 @@ slip_radio_cmd_handler(const uint8_t *data, int len)
       memcpy(packetbuf_dataptr(), &data[pos], len);
       packetbuf_set_datalen(len);
 
-      LOG_DBG("sending %u (%d bytes)\n",
+      printf("sending %u (%d bytes)\n",
               data[2], packetbuf_datalen());
 
       /* parse frame before sending to get addresses, etc. */
@@ -188,7 +189,7 @@ slip_radio_cmd_handler(const uint8_t *data, int len)
       return 1;
     }
   } else if(data[0] == '?') {
-    LOG_DBG("Got request message of type %c\n", data[1]);
+    printf("Got request message of type %c\n", data[1]);
     if(data[1] == 'M') {
       /* this is just a test so far... just to see if it works */
       uip_buf[0] = '!';
@@ -226,10 +227,11 @@ slip_radio_cmd_handler(const uint8_t *data, int len)
 static void
 slip_input_callback(void)
 {
-  LOG_DBG("SR-SIN: %u '%c%c'\n", uip_len, uip_buf[0], uip_buf[1]);
+  printf("SR-SIN: %u '%c%c'\n", uip_len, uip_buf[0], uip_buf[1]);
   if(!cmd_input(uip_buf, uip_len)) {
     cmd_send((uint8_t *)"EUnknown command", 16);
   }
+  printf("INPUT callback\n");
   uipbuf_clear();
 }
 /*---------------------------------------------------------------------------*/

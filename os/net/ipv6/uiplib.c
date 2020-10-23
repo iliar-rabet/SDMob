@@ -96,19 +96,19 @@ uiplib_ip6addrconv(const char *addrstr, uip_ip6addr_t *ipaddr)
       } else if(c >= 'A' && c <= 'F') {
         tmp = c - 'A' + 10;
       } else {
-        LOG_ERR("illegal char: '%c'\n", c);
+        printf("illegal char: '%c'\n", c);
         return 0;
       }
       value = (value << 4) + (tmp & 0xf);
     }
   }
   if(c != '\0' && c != ']' && c != '/') {
-    LOG_ERR("too large address\n");
+    printf("too large address\n");
     return 0;
   }
   if(len < sizeof(uip_ip6addr_t)) {
     if(zero < 0) {
-      LOG_ERR("too short address\n");
+      printf("too short address\n");
       return 0;
     }
     memmove(&ipaddr->u8[zero + sizeof(uip_ip6addr_t) - len],

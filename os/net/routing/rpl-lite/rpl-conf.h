@@ -126,7 +126,7 @@
 #ifdef RPL_CONF_WITH_DAO_ACK
 #define RPL_WITH_DAO_ACK RPL_CONF_WITH_DAO_ACK
 #else
-#define RPL_WITH_DAO_ACK 1
+#define RPL_WITH_DAO_ACK 0
 #endif /* RPL_CONF_WITH_DAO_ACK */
 
 /*
@@ -155,7 +155,7 @@
 #ifdef RPL_CONF_WITH_PROBING
 #define RPL_WITH_PROBING RPL_CONF_WITH_PROBING
 #else
-#define RPL_WITH_PROBING 1
+#define RPL_WITH_PROBING 0
 #endif
 
 /*

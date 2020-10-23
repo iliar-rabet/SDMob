@@ -71,9 +71,7 @@ clock_time_t RPL_PROBING_DELAY_FUNC(void);
 static void handle_dis_timer(void *ptr);
 static void handle_dio_timer(void *ptr);
 static void handle_unicast_dio_timer(void *ptr);
-static void send_new_dao(void *ptr);
 #if RPL_WITH_DAO_ACK
-static void resend_dao(void *ptr);
 static void handle_dao_ack_timer(void *ptr);
 #endif /* RPL_WITH_DAO_ACK */
 #if RPL_WITH_PROBING
@@ -271,7 +269,7 @@ rpl_timers_schedule_dao(void)
   }
 }
 /*---------------------------------------------------------------------------*/
-static void
+void
 send_new_dao(void *ptr)
 {
 #if RPL_WITH_DAO_ACK
@@ -324,7 +322,7 @@ rpl_timers_notify_dao_ack(void)
   schedule_dao_refresh();
 }
 /*---------------------------------------------------------------------------*/
-static void
+void
 resend_dao(void *ptr)
 {
   /* Increment transmission counter before sending */

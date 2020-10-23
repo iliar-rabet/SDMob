@@ -1806,7 +1806,6 @@ input(void)
   /* offset of the fragment in the IP packet */
   uint8_t frag_offset = 0;
   uint8_t *buffer;
-
 #if SICSLOWPAN_CONF_FRAG
   uint8_t is_fragment = 0;
   int8_t frag_context = 0;

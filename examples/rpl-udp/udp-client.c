@@ -4,7 +4,7 @@
 #include "net/netstack.h"
 #include "net/ipv6/simple-udp.h"
 #include "net/ipv6/uiplib.h"
-
+#include "net/packetbuf.h"
 #include "sys/log.h"
 #define LOG_MODULE "App"
 #define LOG_LEVEL LOG_LEVEL_INFO
@@ -13,7 +13,7 @@
 #define UDP_CLIENT_PORT	8765
 #define UDP_SERVER_PORT	5678
 
-#define SEND_INTERVAL		  (60 * CLOCK_SECOND)
+#define SEND_INTERVAL		  (10* CLOCK_SECOND)
 
 static struct simple_udp_connection udp_conn;
 
@@ -33,7 +33,7 @@ char *replace_str(char *str, char *orig, char *rep)
   buffer[p-str] = '\0';
 
   sprintf(buffer+(p-str), "%s%s", rep, p+strlen(orig));
-  printf("rep:%s\n",buffer);
+  // printf("rep:%s\n",buffer);
   return buffer;
 }
 
@@ -46,11 +46,11 @@ udp_rx_callback(struct simple_udp_connection *c,
          const uint8_t *data,
          uint16_t datalen)
 {
-	uip_ip6addr_t rcvd_ip;
-	char buff[40];
+  	uip_ip6addr_t rcvd_ip;
+	// char buff[40];
 	data++;	
   LOG_INFO("Received response ");
-  printf("\ndata is:%s\n",data);
+  // printf("\ndata is:%s\n",data);
   // int i;    
 	// for(i=0; i < 8; i++) {
 	// 	if ( i == 7 ) {
@@ -72,8 +72,11 @@ udp_rx_callback(struct simple_udp_connection *c,
 	// for (i = 0; i < 16; i++) printf("%c", (((*data++ >> 8 ) & 0xff ) ));
 	
   char buf[100];
+
+  printf("last_rssi %d\n",(signed short)  (PACKETBUF_ATTR_RSSI));
+  
   strcpy(buf,replace_str((char *)data,"::",":0:0:0:"));
-  printf("buf:%s\n",buf);
+  // printf("buf:%s\n",buf);
 	if(!uiplib_ip6addrconv(buf, &rcvd_ip)) {
     printf("here error!!!\n");
     return;
@@ -81,7 +84,7 @@ udp_rx_callback(struct simple_udp_connection *c,
   
 	// Logging received IP address
 	LOG_INFO_6ADDR(&rcvd_ip);
-	printf("%s", buff);
+	// printf("%s", buff);
 	printf(" from ");
   LOG_INFO_6ADDR(sender_addr);
 #if LLSEC802154_CONF_ENABLED
@@ -105,16 +108,17 @@ PROCESS_THREAD(udp_client_process, ev, data)
   simple_udp_register(&udp_conn, UDP_CLIENT_PORT, NULL,
                       UDP_SERVER_PORT, udp_rx_callback);
 
-  etimer_set(&periodic_timer, random_rand() % SEND_INTERVAL);
+  etimer_set(&periodic_timer, SEND_INTERVAL);
   while(1) {
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
 
-    if(NETSTACK_ROUTING.node_is_reachable() && NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr)) {
+    if( NETSTACK_ROUTING.get_root_ipaddr(&dest_ipaddr)) {
       /* Send to DAG root */
-      LOG_INFO("Sending request %u to ", count);
-      LOG_INFO_6ADDR(&dest_ipaddr);
-      LOG_INFO_("\n");
+      // LOG_INFO("Sending request %u to ", count);
+      // LOG_INFO_6ADDR(&dest_ipaddr);
+      // LOG_INFO_("\n");
       snprintf(str, sizeof(str), "hello %d", count);
+      printf("sending %s\n",str);
       simple_udp_sendto(&udp_conn, str, strlen(str), &dest_ipaddr);
       count++;
       //rpl_neighbor_print_list(string);
@@ -124,8 +128,8 @@ PROCESS_THREAD(udp_client_process, ev, data)
     }
 
     /* Add some jitter */
-    etimer_set(&periodic_timer, SEND_INTERVAL
-      - CLOCK_SECOND + (random_rand() % (2 * CLOCK_SECOND)));
+    etimer_set(&periodic_timer, SEND_INTERVAL);
+    //   - CLOCK_SECOND + (random_rand() % (2 * CLOCK_SECOND)));
   }
 
   PROCESS_END();

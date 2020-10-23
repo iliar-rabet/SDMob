@@ -43,6 +43,7 @@
  */
 
 #include "net/routing/rpl-lite/rpl.h"
+#include "net/routing/rpl-lite/rpl-dag.h"
 #include "net/ipv6/uip-sr.h"
 #include "net/nbr-table.h"
 #include "net/link-stats.h"
@@ -362,7 +363,7 @@ rpl_dag_update_state(void)
   curr_instance.of->update_metric_container();
 }
 /*---------------------------------------------------------------------------*/
-static rpl_nbr_t *
+rpl_nbr_t *
 update_nbr_from_dio(uip_ipaddr_t *from, rpl_dio_t *dio)
 {
   rpl_nbr_t *nbr = NULL;
@@ -375,6 +376,7 @@ update_nbr_from_dio(uip_ipaddr_t *from, rpl_dio_t *dio)
      * Typically, the neighbor is added upon receiving a DIO. */
     lladdr = uip_ds6_nbr_lladdr_from_ipaddr(from);
     if(lladdr == NULL) {
+      printf("lladdr==NULL");
       return NULL;
     }
 
@@ -383,6 +385,7 @@ update_nbr_from_dio(uip_ipaddr_t *from, rpl_dio_t *dio)
                              NBR_TABLE_REASON_RPL_DIO, dio);
     if(nbr == NULL) {
       LOG_ERR("failed to add neighbor\n");
+      printf("nbr_table_add_lladdr returned NULL\n");
       return NULL;
     }
   }

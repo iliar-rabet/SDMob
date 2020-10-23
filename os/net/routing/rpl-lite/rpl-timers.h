@@ -51,6 +51,9 @@
 
 /********** Public functions **********/
 
+void send_new_dao(void *ptr);
+void resend_dao(void *ptr);
+
 /**
  * Schedule periodic DIS with a random delay based on RPL_DIS_INTERVAL, until
  * we join a DAG.

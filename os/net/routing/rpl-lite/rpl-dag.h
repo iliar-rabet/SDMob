@@ -194,4 +194,7 @@ void rpl_dag_init(void);
 
  /** @} */
 
+rpl_nbr_t *
+update_nbr_from_dio(uip_ipaddr_t *, rpl_dio_t *);
+
 #endif /* RPL_DAG_H */

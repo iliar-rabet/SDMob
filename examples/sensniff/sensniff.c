@@ -189,6 +189,7 @@ send_channel_max(void)
 static int
 char_in(unsigned char c)
 {
+  printf("in the call back func:\n");
   /* Bump the timeout counter */
   ctimer_set(&ct, TIMEOUT, reset_state, NULL);
 
@@ -202,6 +203,7 @@ char_in(unsigned char c)
 void
 sensniff_output_frame()
 {
+  printf("sensniff output frame\n");
   int i;
   uint8_t len = packetbuf_datalen() & 0xFF;
 
@@ -325,6 +327,7 @@ PROCESS_THREAD(sensniff_process, ev, data)
   sensniff_io_set_input(&char_in);
 
   while(1) {
+    printf("in the while:\n");
     PROCESS_YIELD();
 
     if(ev == PROCESS_EVENT_POLL) {
