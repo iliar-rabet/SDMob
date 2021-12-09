@@ -1,6 +1,6 @@
 This repository serves as the implementation for the following papers:
 
-[PDF] SDMob.pdf
+[PDF](SDMob.pdf)
 
 To run the SDMob, you will need to install the mobility plugin for Cooja
 [Mobility plugin] https://anrg.usc.edu/contiki/index.php/Mobility_of_Nodes_in_Cooja
